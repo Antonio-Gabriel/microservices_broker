@@ -5,8 +5,8 @@ namespace Candidates\application\usecases;
 use Candidates\common\Log;
 use Candidates\domain\Categories;
 use Candidates\domain\types\CategoriesProps;
-use Candidates\domain\exceptions\CategoryAlreadyExists;
 use Candidates\application\repositories\ICategoriesRepository;
+use Candidates\domain\exceptions\CategoryAlreadyExistsException;
 
 class CreateCategory
 {
@@ -15,29 +15,26 @@ class CreateCategory
     ) {
     }
 
-    public function execute(string $name): mixed
+    public function execute(string $name)
     {
+        $category = Categories::create(new CategoriesProps($name));
+
+        if ($error = $category->errorValue()) {
+            throw new \Exception($error);
+        }
+
         $categoryAlreadyExists = $this->categoriesRepository->findByName($name);
 
         if ($categoryAlreadyExists) {
-            // Log::set("Category [{$name}] already exists!", "error", [
-            //     "name" => $name
-            // ]);
+            Log::set("Category [{$name}] already exists!", "error", [
+                "name" => $name
+            ]);
 
-            $errpr = new CategoryAlreadyExists("Category [{$name}] already exists!");
-
-            var_dump($errpr);
-            //return ;
+            throw new CategoryAlreadyExistsException("Category [{$name}] already exists!");
         }
 
-        // $category = Categories::create(new CategoriesProps($name));
+        $result = $this->categoriesRepository->create($category->getValue());
 
-        // if ($category->errorValue()) {
-        //     return $category;
-        // }
-
-        // $result = $this->categoriesRepository->create($category->getValue());
-
-        // return $result;
+        return $result;
     }
 }
