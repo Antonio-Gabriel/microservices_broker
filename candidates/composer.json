@@ -1,0 +1,26 @@
+{
+  "name": "vendor/candidates",
+  "description": "service for register candidates and categories relateds to candidates",
+  "license": "MTI",
+  "autoload": {
+    "psr-4": {
+      "Candidates\\": "src/"
+    },
+    "classmap": [
+      "scripts/"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Antonio Gabriel",
+      "email": "antoniocamposgabriel@gmail.com"
+    }
+  ],
+  "require": {
+    "ramsey/uuid": "^4.4",
+    "vlucas/phpdotenv": "^5.4",
+    "monolog/monolog": "^3.2",
+    "propel/propel": "~2.0@dev",
+    "slim/slim": "3.*"
+  }
+}

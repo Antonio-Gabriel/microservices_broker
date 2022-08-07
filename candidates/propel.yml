@@ -1,0 +1,28 @@
+propel:
+  paths:
+    sqlDir: scripts
+    phpDir: 'scripts'
+    schemaDir: 'schema'
+    outputDir: 'scripts'
+    phpConfDir: 'scripts'
+  database:
+    connections:
+      candidates:
+        adapter: mysql
+        settings:
+          charset: utf8mb4
+          queries:
+            utf8: 'SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci, COLLATION_CONNECTION = utf8mb4_unicode_ci, COLLATION_DATABASE = utf8mb4_unicode_ci, COLLATION_SERVER = utf8mb4_unicode_ci'
+        classname: Propel\Runtime\Connection\ConnectionWrapper
+        dsn: 'mysql:host=127.0.0.1;dbname=candidates'
+        user: 'root'
+        password: ''
+        attributes:
+  runtime:
+    defaultConnection: candidates
+    connections:
+      - candidates
+  generator:
+    defaultConnection: candidates
+    connections:
+      - candidates

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<database name="candidates" defaultIdMethod="native">
+  <table name="candidate" phpName="Candidate">
+    <column
+      name="id"
+      type="varchar"
+      size="255"
+      required="true"
+      primaryKey="true"
+    />
+    <column name="name" type="varchar" size="80" required="true" />
+
+    <column name="category_id" type="varchar" size="255" required="true" />
+        
+    <foreign-key
+      foreignTable="category"
+      phpName="Category"
+      refPhpName="Candidate"
+    >
+      <reference local="category_id" foreign="id" />
+    </foreign-key>   
+  </table>
+  
+  <table name="category" phpName="Category">
+   <column
+      name="id"
+      type="varchar"
+      size="255"
+      required="true"
+      primaryKey="true"
+    />
+   <column name="name" type="varchar" size="80" required="true" />
+  </table>
+
+</database>
