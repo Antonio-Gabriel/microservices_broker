@@ -9,18 +9,15 @@ return function (App $app) {
     $app->post("/category", function ($req, $res) {
 
         $createCategory = new CreateCategory(new CategoriesRepository);
-        $result = $createCategory->execute("TV");
 
-        // if ($error = $result->message->errorValue()) {
-        //     return $res->withStatus(400)->withJson(["error" => $error]);
-        // }
+        try {
+            $result = $createCategory->execute($req->getParsedBody()["name"]);
 
-        // if ($error = $result->errorValue()) {
-        //     return $res->withStatus(400)->withJson(["error" => $error]);
-        // }
-
-//            var_dump($result);
-
-        // return $res->withStatus(201)->withJson(["msg" => $result]);
+            return $res->withStatus(200)->withJson(["data" => [
+                "id" => $result
+            ]]);
+        } catch (\Exception $e) {
+            return $res->withStatus(400)->withJson(["error" => $e->getMessage()]);
+        }    
     });
 };
