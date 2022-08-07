@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: candidates/Dockerfile
+    container_name: microservices-app
+    restart: always
+    working_dir: /var/www/
+    volumes:
+      - ./candidates:/var/www
+
+  nginx:
+    image: nginx:1.19-alpine
+    container_name: microservices-nginx
+    restart: always
+    ports:
+      - "8000:80"
+    volumes:
+      - ./candidates:/var/www/
+      # - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
+      # - ./nginx:/etc/nginx/conf.d       
+      - ./logs/nginx:/var/log/nginx/
+
+    networks:
+      - internal
+  php:
+    image: php:fpm-alpine
+    networks:
+      - internal
+    volumes:
+      - ./candidates:/var/www/
+      - ./logs/php.log:/var/log/fpm-php.www.log
+networks:
+  internal:
+    driver: bridge 
