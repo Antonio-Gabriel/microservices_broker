@@ -1,3 +1,17 @@
 2022/08/07 01:50:37 [error] 32#32: *2 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8000", referrer: "http://localhost:8000/"
 2022/08/07 02:02:56 [error] 32#32: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.24.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8000", referrer: "http://localhost:8000/"
 2022/08/07 02:10:17 [error] 34#34: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.27.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8000", referrer: "http://localhost:8000/"
+2022/08/08 08:22:08 [error] 33#33: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8000", referrer: "http://localhost:8000/"
+2022/08/08 08:36:55 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:36:58 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:37:01 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:37:03 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:37:06 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:37:09 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:37:14 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:37:21 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:37:35 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:38:02 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:38:55 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:39:57 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
+2022/08/08 08:40:59 [crit] 1#1: pread() "/etc/nginx/conf.d/site.conf" failed (21: Is a directory)
