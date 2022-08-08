@@ -9,3 +9,4 @@
 [2022-08-08T16:35:23.115844+01:00] LOG.ERROR: Category [TELEJORNAL] already exists! {"name":"TELEJORNAL"} []
 [2022-08-08T16:57:53.214572+01:00] LOG.ERROR: Candidate [DSTV] already exists! {"name":"DSTV","categoryId":"5c9d7676-ad27-4e64-9ae1-73d0662f58a5"} []
 [2022-08-08T18:17:32.765362+01:00] LOG.ERROR: Category [TELEJORNAL] already exists! {"name":"TELEJORNAL"} []
+[2022-08-08T22:27:09.494763+01:00] LOG.ERROR: Candidate doesn't exists! {"candidateId":"5c9d7676-ad27-4e64-9ae1-73d0662f58a5"} []
