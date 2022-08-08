@@ -4,7 +4,7 @@ namespace Candidates\domain\exceptions;
 
 use Exception;
 
-class CandidateAlreadyExists extends Exception
+class CandidateDoNotExists extends Exception
 {
     public function __construct(string $message = "", int $code = 0, $previous = null)
     {
