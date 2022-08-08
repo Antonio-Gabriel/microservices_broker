@@ -7,9 +7,9 @@ services:
       dockerfile: candidates/Dockerfile
     container_name: microservices-app
     restart: always
-    working_dir: /var/www/
-    volumes:
-      - ./candidates:/var/www
+    working_dir: /www
+    volumes:      
+      - ./www:/www      
 
   nginx:
     image: nginx:1.19-alpine
@@ -17,11 +17,9 @@ services:
     restart: always
     ports:
       - "8000:80"
-    volumes:
-      - ./candidates:/var/www/
-      # - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
-      # - ./nginx:/etc/nginx/conf.d       
-      - ./logs/nginx:/var/log/nginx/
+    volumes:       
+      - ./www:/www      
+      - ./logs/nginx:/var/log/nginx/      
 
     networks:
       - internal
@@ -30,7 +28,7 @@ services:
     networks:
       - internal
     volumes:
-      - ./candidates:/var/www/
+      - ./www:/www      
       - ./logs/php.log:/var/log/fpm-php.www.log
 networks:
   internal:
