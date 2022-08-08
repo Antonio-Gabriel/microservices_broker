@@ -2,3 +2,4 @@
 [2022-08-07T01:48:53.686126+02:00] LOG.ERROR: Category [TV] already exists! {"name":"TV"} []
 [2022-08-07T02:24:20.233575+02:00] LOG.ERROR: Category [TV] already exists! {"name":"TV"} []
 [2022-08-07T02:29:01.444278+02:00] LOG.ERROR: Category [Filme] already exists! {"name":"Filme"} []
+[2022-08-08T09:47:22.859345+01:00] LOG.ERROR: Category [Filme] already exists! {"name":"Filme"} []
