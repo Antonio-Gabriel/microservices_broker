@@ -37,14 +37,14 @@ class VoteUseCase
         }
 
         $this->producer->send([
-            'topic'     => 'vote.new_vote',
-            'value'     => [
-                'voter'             =>  $voter,
-                'voterEmail'        =>  $voterEmail,
-                'candidateId'       =>  $candidate->getId(),
-                'candidateName'     =>  $candidate->getName(),
-            ],
-            'key'       => 'vote.new_vote_key',
+            'topic' => 'candidate.new_vote',
+            'value' =>  json_encode([
+                'voter'          =>  $voter,
+                'voterEmail'     =>  $voterEmail,
+                'candidateId'    =>  $candidate->getId(),
+                'candidateName'  =>  $candidate->getName(),
+            ]),
+            'key' => 'candidate.new_vote_key',
         ]);
     }
 }
