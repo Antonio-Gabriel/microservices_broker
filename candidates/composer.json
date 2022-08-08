@@ -2,6 +2,9 @@
   "name": "vendor/candidates",
   "description": "service for register candidates and categories relateds to candidates",
   "license": "MTI",
+  "scripts": {
+    "server": "php -S localhost:8000 -t . index.php"
+  },
   "autoload": {
     "psr-4": {
       "Candidates\\": "src/"
