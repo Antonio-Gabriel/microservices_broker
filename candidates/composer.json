@@ -3,7 +3,10 @@
   "description": "service for register candidates and categories relateds to candidates",
   "license": "MTI",
   "scripts": {
-    "server": "php -S localhost:8000 -t . index.php"
+    "server": "php -S localhost:8000 -t . index.php --timeout=0"
+  },
+  "config": {
+    "process-timeout": 0
   },
   "autoload": {
     "psr-4": {
