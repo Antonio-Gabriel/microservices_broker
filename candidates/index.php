@@ -6,6 +6,9 @@ require_once __DIR__ . "/scripts/config.php";
 $http = require_once __DIR__ . "/src/infra/http/http.php";
 
 use Slim\App;
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__)->load();
 
 $app = new App();
 
