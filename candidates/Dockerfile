@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install -y \
 # FROM nginx:alpine
 # ADD nginx/default.conf /etc/nginx/conf.d
 
-WORKDIR /var/www
+WORKDIR /www
