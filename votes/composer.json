@@ -1,0 +1,23 @@
+{
+  "name": "vendor/votes",
+  "description": "service for recive data of candidates service and process them",
+  "license": "MTI",
+  "scripts": {
+    "server": "php index.php"
+  },
+  "autoload": {
+    "psr-4": {
+      "Votes\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Antonio Gabriel",
+      "email": "antoniocamposgabriel@gmail.com"
+    }
+  ],
+  "require": {
+    "ramsey/uuid": "^4.4",
+    "nmred/kafka-php": "^0.2.0.8"
+  }
+}
