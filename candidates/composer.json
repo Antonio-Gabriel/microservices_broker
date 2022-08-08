@@ -25,8 +25,9 @@
   "require": {
     "ramsey/uuid": "^4.4",
     "vlucas/phpdotenv": "^5.4",
-    "monolog/monolog": "^3.2",
     "propel/propel": "~2.0@dev",
-    "slim/slim": "3.*"
+    "slim/slim": "3.*",
+    "nmred/kafka-php": "^0.2.0.8",
+    "monolog/monolog": "^2.1"
   }
 }
