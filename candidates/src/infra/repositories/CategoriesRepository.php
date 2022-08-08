@@ -25,4 +25,17 @@ class CategoriesRepository implements ICategoriesRepository
     {
         return CategoryQuery::create()->findOneByName($name);
     }
+
+    public function list(): array
+    {
+        $categories = [];
+        foreach (CategoryQuery::create()->find() as $value) {
+            array_push($categories, [
+                "id"    =>  $value->getId(),
+                "name"  =>  $value->getName(),
+            ]);
+        }
+
+        return $categories;
+    }
 }
